@@ -8,15 +8,15 @@ The fork function has no arguments.
 
 # Stat
 ### Description
-Returns information about a file.
+Returns the meta data of a specified file by the path argument and stores it into the buf.
 
 ### Arguments
 - const char* path: path of the file
-- struct stat* buf: buffer for file information
+- struct stat* buf: buffer for the file information
 
 # kill
 ### Description
-Sends any signal to any process.
+Sends a signal specified by the argument sig to the process with the specified process id pid.
 
 ### Arguments
 - pid_t pid: process id
@@ -24,15 +24,15 @@ Sends any signal to any process.
 
 # chmod
 ### Description
-Changes the files mode.
+Lets you change the file access values like read-access, write-access etc.
 
 ### Arguments
 - const char* pathname: filepath
-- mode_t mode: new mode
+- mode_t mode: new access values
 
 # waitpid
 ### Description
-Suspends execution of the calling process until a child has changed state. It waits only for terminated children except if options arguments has been modified.
+Suspends execution of the calling process until a child has changed state. It only waits for terminated children except if the options arguments has been modified.
 
 ### Arguments
 - pid_t pid: process id of child process
